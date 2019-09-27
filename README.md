@@ -7,15 +7,13 @@ The slides are included here in [pdf](slides.pdf), and below are the details/ste
 
 ## Steps taken to reproduce demo
 
-### Pre-setup (getting code)
-
-* create some directories:
-	* `mkdir -p ~/code`
-	* `mkdir -p ~/.armador`
-	* `cd ~/code`
-	* `git clone https://github.com/travelaudience/armador.git`
-	* `git clone https://github.com/dockersamples/example-voting-app.git`
-	* `cp -r armador/docs/example/example-app-charts/vote .`
+### Pre-setup (getting code & creating directories):
+* `mkdir -p ~/code`
+* `mkdir -p ~/.armador`
+* `cd ~/code`
+* `git clone https://github.com/travelaudience/armador.git`
+* `git clone https://github.com/dockersamples/example-voting-app.git`
+* `cp -r armador/docs/example/example-app-charts/vote .`
 
 ### Armador (creating the env)
 
@@ -36,11 +34,11 @@ The slides are included here in [pdf](slides.pdf), and below are the details/ste
 	* `cp ~/armador/docs/example/global-config.yaml ~/.armador.yaml`
 	* `vi ~/.armador.yaml`
 		* change `cluster` section to point your cluster, in the demo this was:
-		```
+```
 cluster:
   minikube:
-    contextname: minikube
-		```
+    contextname: minikube		
+```
 * create the env:
 	* `cd ~/code/vote`
 	* `armador create jeff`
